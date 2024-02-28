@@ -1,0 +1,171 @@
+/* Reset básico */
+* {
+    margin: 0; /* Zera as margens */
+    padding: 0; /* Zera o preenchimento */
+    outline: 0; /* Remove a linha de contorno */
+    font-size: 100%; /* Define o tamanho da fonte como 100% */
+    background: transparent; /* Define o plano de fundo como transparente */
+    box-sizing: border-box; /* Define a caixa de modelo como border-box */
+    color: #000; /* Define a cor do texto como preto */
+}
+
+body {
+    background-color: #d8d4da; /* Cor de fundo do corpo */
+    overflow: scroll; /* Adiciona barra de rolagem */
+    overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+}
+
+/* HEADER */
+header, section, footer {
+    display: flex; /* Usa um layout flexível */
+    justify-content: space-between; /* Distribui os itens uniformemente ao longo do eixo principal */
+    padding-left: 20px; /* Adiciona preenchimento à esquerda */
+    padding-right: 20px; /* Adiciona preenchimento à direita */
+}
+
+header {
+    background: #000; /* Cor de fundo do cabeçalho */
+    align-items: center; /* Centraliza verticalmente os itens */
+}
+
+header img {
+    width: 301px; /* Largura da imagem do logotipo */
+    height: 111px; /* Altura da imagem do logotipo */
+    margin: 10px 0; /* Margem superior e inferior */
+}
+
+header nav {
+    display: flex; /* Usa um layout flexível */
+}
+
+.btmenu {
+    text-decoration: none; /* Remove a decoração de texto */
+    display: flex; /* Usa um layout flexível */
+    width: 120px; /* Largura do botão */
+    height: 30px; /* Altura do botão */
+    margin: 2px; /* Margem externa */
+    padding: 1px 5px; /* Preenchimento interno */
+    background-color: #222; /* Cor de fundo do botão */
+    border-radius: 10px; /* Raio da borda */
+    color: #bbb; /* Cor do texto */
+    font-family: Arial, Helvetica, sans-serif; /* Família da fonte */
+    font-size: 10px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor ao passar por cima */
+    border: 0; /* Remove a borda */
+    text-transform: uppercase; /* Transforma o texto em maiúsculo */
+    outline: none; /* Remove a borda ao focar */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.btmenu:hover {
+    background-color: #c22; /* Cor de fundo ao passar o mouse */
+    color: #fff; /* Cor do texto ao passar o mouse */
+}
+
+.banner {
+    padding: 0; /* Remove o preenchimento */
+    overflow: hidden; /* Esconde o conteúdo além da largura especificada */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.banner img {
+    width: 1000px; /* Largura da imagem do banner */
+    height: 200px; /* Altura da imagem do banner */
+    margin: 10px 0; /* Margem superior e inferior */
+}
+
+.buscador {
+    margin: 10px 0; /* Margem superior e inferior */
+    display: flex; /* Usa um layout flexível */
+    flex-direction: column; /* Alinha os itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.buscador p {
+    width: 800px; /* Largura do parágrafo */
+    margin-top: 10px; /* Margem superior */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.buscador form {
+    width: 800px; /* Largura do formulário */
+    border: 1px solid #888; /* Borda sólida */
+    padding: 10px; /* Preenchimento interno */
+    display: flex; /* Usa um layout flexível */
+    margin: 10px 0; /* Margem superior e inferior */
+    justify-content: space-between; /* Distribui uniformemente os itens */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.destaque {
+    margin: auto; /* Centraliza horizontalmente */
+    padding: 10px; /* Preenchimento */
+    background: #ffffff; /* Cor de fundo */
+    border-radius: 50%; /* Raio da borda */
+}
+
+.destaque:hover {
+    background: #c22; /* Cor de fundo ao passar o mouse */
+}
+
+footer {
+    margin-top: 10px; /* Margem superior */
+    background: #807e7e; /* Cor de fundo */
+    padding-top: 20px; /* Preenchimento superior */
+    padding-bottom: 20px; /* Preenchimento inferior */
+}
+
+/* Adiciona regras específicas para dispositivos móveis */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    header, section, footer {
+        padding-left: 3%; /* Adiciona preenchimento à esquerda */
+        padding-right: 3%; /* Adiciona preenchimento à direita */
+    }
+
+    header {
+        flex-direction: column; /* Alinha os itens em coluna */
+        align-items: center; /* Centraliza horizontalmente */
+        text-align: center; /* Alinha o texto ao centro */
+    }
+
+    header nav {
+        flex-direction: column; /* Alinha os itens em coluna */
+        width: 100%; /* Largura total */
+        margin-top: 10px; /* Margem superior */
+    }
+
+    footer, #destaques {
+        display: none; /* Esconde o rodapé e os destaques */
+    }
+
+    .banner img {
+        width: 100%; /* Largura total */
+        height: auto; /* Altura automática */
+    }
+
+    .buscador form, .buscador p {
+        flex-direction: column; /* Alinha os itens em coluna */
+        align-items: center; /* Centraliza horizontalmente */
+        width: 100%; /* Largura total */
+    }
+
+    .buscador p, select, label {
+        font-size: 20px; /* Tamanho da fonte */
+    }
+
+    .btmenu {
+        width: 100%; /* Largura total */
+        height: 80px; /* Altura */
+        font-size: 30px; /* Tamanho da fonte */
+        margin: 5px 0; /* Margem */
+    }
+
+    /* Reduzindo o tamanho do botão de busca */
+    .buscador input[type="submit"] {
+        height: 30px; /* Altura reduzida */
+        font-size: 24px; /* Tamanho da fonte reduzido */
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>curso css</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <header> <!-- Área do cabeçalho -->
+        <img src="imgs/luancel.png" alt="Logotipo"> <!-- Logotipo -->
+        <nav> <!-- Navegação -->
+            <a class="btmenu" href="index.html" target="_self">Home</a>
+            <a class="btmenu" href="#" target="_self">Celulares</a>
+            <a class="btmenu" href="#" target="_self">Contato</a>
+            <a class="btmenu" href="#" target="_self">Localização</a>
+        </nav>
+    </header>
+
+    <section class="banner"> <!-- Seção de banner -->
+        <img src="imgs/luanfoto.jpg" alt="Banner">
+    </section>
+
+    <section class="buscador">  <!-- Seção de busca -->
+        <p>Abaixo seguem as opcoes</p> <!-- Texto de instrução -->
+        <form name="fbuscador" id="fbuscador" action="#" method="post"> <!-- Formulário de busca -->
+            <div class="buscador-options"> <!-- Div para agrupar as opções -->
+                <div>
+                    <label for="marca">Selecione a marca</label> <!-- Texto explicativo para seleção de marca -->
+                    <select name="marca" id="id_marcas"> <!-- Seleção de marca -->
+                        <option value="">Sem Modelos</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="modelo">Selecione o modelo</label> <!-- Texto explicativo para seleção de modelo -->
+                    <select name="modelo" id="id_modelos"> <!-- Seleção de modelo -->
+                        <option value="">Sem Modelos</option>
+                    </select>
+                </div>
+            </div>
+
+            <div> <!-- Botão de busca -->
+                <input type="submit" value="Buscar" name="f_submit" class="btmenu">
+            </div>
+        </form>
+    </section>
+
+    <section id="destaques">  <!-- Destaques com 3 links -->
+        <a class="destaque" href="#" target="_self" title="Mostrar veículo"><img src="imgs/ferramenta.png" alt="Ícone de Ferramenta"></a>
+        <a class="destaque" href="#" target="_self" title="Página de contato"><img src="imgs/erro.png" alt="Ícone de Erro"></a>
+        <a class="destaque" href="#" target="_self" title="Nossa localização"><img src="imgs/cel.png" alt="Ícone de Celular"></a>
+    </section>
+
+    <footer> <!-- Rodapé -->
+        <p>Site desenvolvido para conserto de smartphones</p> <!-- Texto do rodapé -->
+    </footer>
+    
+</body>
+</html>
